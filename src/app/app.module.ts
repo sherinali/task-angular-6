@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule , NO_ERRORS_SCHEMA} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,8 +13,8 @@ import { SuccessComponent } from './success/success.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { Router } from '@angular/router/src/router';
-
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
 const  routes:Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
@@ -39,9 +39,11 @@ const  routes:Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
