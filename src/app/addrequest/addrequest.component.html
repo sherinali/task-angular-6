@@ -1,49 +1,68 @@
-<div dir="auto">
-<h3 class="uk-card-title text-right" >اضف تفاصيل طلبك</h3>
+<div class="mr-3" dir="rtl">
+  <h3 class="h3 text-right" style="color:rgb(6, 75, 6)">اضف تفاصيل طلبك</h3>
 </div>
 <br>
 
 <!-- Extended default form grid -->
-<form dir="auto">
-    <!-- Grid row -->
-    <div class="form-row">
-        <!-- Default input -->
-        <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <!-- Default input -->
-        <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-        </div>
+<form class="mr-3" dir="rtl">
+  <!-- Grid row -->
+  <div class="form-row">
+    <!-- Default input -->
+    <div class="form-group col-sm-3 text-right ">
+      <label>عنوان الحالة</label>
+      <input type="text" class="form-control" placeholder="عنوان  الحالة" name="titel" [(ngModel)]="titel">
     </div>
-    <!-- Grid row -->
+  </div>
+  <!-- Grid row -->
+  <div class="form-row">
+    <!-- Default input -->
+    <div class="form-group col-sm-4 text-right">
+      <label>العنوان</label>
+      <input type="text" class="form-control" placeholder="المحافظة - المنطقة او الحي" name="add1" [(ngModel)]="add1">
+    </div>
+    <div class="form-group col-sm-4 text-right">
+      <label>تفاصيل العنوان</label>
+      <input type="text" class="form-control" placeholder="محلة - زقاق - دار" name="add2" [(ngModel)]="add2">
+    </div>
+  </div>
+  <div class="form-row">
+    <!-- Default input -->
+    <div class="form-group col-sm-4  text-right">
+      <label>اقرب نقطة دالة</label>
+      <input type="text" class="form-control" placeholder="اقرب نقطة دالة" name="n_add" [(ngModel)]="n_add" >
+    </div>
+  </div>
+  <!-- Grid row -->
+  <div class="form-row">
+    <!-- Default input -->
+    <div class="form-group col-sm-4 text-right">
+      <label>رقم الهاتف</label>
+      <input type="text" class="form-control" placeholder="رقم الهاتف" name="phone" [(ngModel)]="phone">
+    </div>
+    <div class="form-group col-sm-4 text-right">
+      <label>طرق تواصل اخرى</label>
+      <input type="text" class="form-control" placeholder="فيسبوك مسنجر - فايبر - واتساب - تليكرام" name="contact" [(ngModel)]="contact" >
+    </div>
+  </div>
 
-    <!-- Default input -->
-    <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  <!-- Textarea -->
+  <div class="form-group col-sm-10  text-right  ">
+    <label>وصف الحالة والتفاصيل</label>
+    <textarea class="form-control" rows="4" name="discription" [(ngModel)]="discription" ></textarea>
+  </div>
+  <!-- Image File input-->
+  <div class="file-field" dir="rtl">
+    <div class="file-path-wrapper text-right " dir="rtl">
+        <label> ضع صورة للحالة </label>
+    <!--  <input class="file-path validate" type="text" placeholder="ضع صورة للحالة"> -->
     </div>
-    <!-- Default input -->
-    <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <!-- Grid row -->
-    <div class="form-row">
-        <!-- Default input -->
-        <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="New York City">
-        </div>
-        <!-- Default input -->
-        <div class="form-group col-md-6">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="11206-1117">
-        </div>
-    </div>
-    <!-- Grid row -->
-    <button type="submit" class="btn btn-primary btn-md">submit</button>
+    <a class="btn-floating btn-lg blue-gradient mt-0 float-right">
+      <i class="fa fa-paperclip" aria-hidden="true"></i>
+      <input type="file">
+    </a>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-md">اضف</button>
+
 </form>
-<!-- Extended default form grid -->

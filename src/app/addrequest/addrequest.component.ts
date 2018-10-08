@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddrequestComponent implements OnInit {
 
+  titel =""
+  add1 =""
+  add2 =""
+  n_add =""
+  phone =""
+  contact =""
+  discription =""
+
   constructor() { }
 
   ngOnInit() {

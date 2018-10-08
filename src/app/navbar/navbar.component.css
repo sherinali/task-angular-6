@@ -1,0 +1,25 @@
+
+
+.navbar {
+    background-color: transparent;
+    white-space: nowrap;
+   
+  
+}
+
+nav ul li a{
+  
+    display: inline-block;
+    white-space:nowrap;
+    
+}
+
+li{
+    padding-left: 20px;
+    display: inline-block;
+    white-space:nowrap;
+}
+
+ul {
+        white-space:nowrap;  
+    }

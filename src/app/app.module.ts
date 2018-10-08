@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , NO_ERRORS_SCHEMA} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -40,7 +41,8 @@ const  routes:Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
