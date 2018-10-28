@@ -11,11 +11,25 @@ import { AddrequestComponent } from './addrequest/addrequest.component';
 import { VolunteersComponent } from './volunteers/volunteers.component';
 import { AboutComponent } from './about/about.component';
 import { SuccessComponent } from './success/success.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component'
 
 import { RouterModule, Routes } from '@angular/router';
 import { Router } from '@angular/router/src/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
+import { NavbarModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+//import { DateModule } from 'core-js' ;
+import { formatDate } from '@angular/common';
+//import {DatePipe} from '@angular/common';
+import { dateformat } from 'dateformat';
+
+
 const  routes:Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
@@ -24,6 +38,8 @@ const  routes:Routes = [
   {path:'Volunteers',component:VolunteersComponent},
   {path:'Success',component:SuccessComponent},
   {path:'about',component:AboutComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'login',component:LoginComponent}, 
 ]
 
 @NgModule({
@@ -36,13 +52,22 @@ const  routes:Routes = [
     AddrequestComponent,
     VolunteersComponent,
     AboutComponent,
-    SuccessComponent
+    SuccessComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     MDBBootstrapModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    //DateModule,
+   
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent],
