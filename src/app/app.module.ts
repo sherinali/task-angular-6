@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , NO_ERRORS_SCHEMA} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -23,10 +23,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireStorageReference, AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
+
 //import { DateModule } from 'core-js' ;
 import { formatDate } from '@angular/common';
-//import {DatePipe} from '@angular/common';
+import {DatePipe} from '@angular/common';
 import { dateformat } from 'dateformat';
 
 
@@ -61,16 +64,20 @@ const  routes:Routes = [
     RouterModule.forRoot(routes),
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    //DateModule,
+    AngularFireStorageModule,
+    
+    
    
     
 
   ],
-  providers: [],
+  providers: [DatePipe] ,
   bootstrap: [AppComponent],
-  schemas: [ NO_ERRORS_SCHEMA ]
+  schemas: [ NO_ERRORS_SCHEMA ],
+
 })
 export class AppModule { }

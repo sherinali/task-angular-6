@@ -4,7 +4,7 @@
 <br>
 
 <!-- Extended default form grid -->
-<form class="mr-3" dir="rtl">
+<form class="mr-3" dir="rtl" #myForm="ngForm" (ngSubmit)="onSubmit()">
   <!-- Grid row -->
   <div class="form-row">
     <!-- Default input -->
@@ -58,19 +58,18 @@
   <div class="file-field" dir="rtl">
     <div class="file-path-wrapper text-right " dir="rtl">
         <label> ضع صورة للحالة </label>
-    <!--  <input class="file-path validate" type="text" placeholder="ضع صورة للحالة"> 
-     <input type="file" (change)="upload($event)" accept=".png,.jpg" />
-    -->
+    <!--  <input class="file-path validate" type="text" placeholder="ضع صورة للحالة">  -->
+    
     </div>
     <a class="btn-floating btn-lg blue-gradient mt-0 float-right">
       <i class="fa fa-paperclip" aria-hidden="true"></i>
-      <input type="file">
+      <input type="file" (change)="upload($event)" accept=".png,.jpg" />
     </a>
 
   </div>
 
   
-
-  <button type="submit" class="btn btn-primary btn-md" (click)="insertReq()">اضف</button>
+  
+  <button type="button" class="btn btn-primary btn-md" (click)="insertReq()">اضف</button>
 
 </form>
