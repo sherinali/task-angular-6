@@ -1,0 +1,11 @@
+.full-height {
+    height: 100%;
+    width: 100%;
+    
+    /* display:block; */
+    /* background-image: url("assets/img/background.jpg") no-repeat center center fixed;  */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    background-color:transparent;  */
+}
