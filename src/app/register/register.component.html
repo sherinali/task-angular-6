@@ -10,30 +10,15 @@
     <!-- Form -->
     <form class="text-center" style="color: #757575;" dir="rtl">
 
-      <div class="form-row" dir="rtl">
-        <div class="col" dir="rtl">
-          <div class="md-form" dir="rtl">
-            <input type="text" id="materialRegisterFormFirstName" class="form-control">
-            <label style="right: 0"for="materialRegisterFormFirstName">الاسم الاول</label>
-          </div>
-        </div>
-        <div class="col" dir="rtl">
-          <div class="md-form" >
-            <input type="text" id="materialRegisterFormLastName" class="form-control">
-            <label  style="right: 0" for="materialRegisterFormLastName">الاسم الثاني</label>
-          </div>
-        </div>
-      </div>
-
-
+      <br>
       <div class="md-form mt-0">
-        <input type="username" id="materialRegisterFormEmail" class="form-control">
-        <label  style="right: 0" for="materialRegisterFormEmail" >اسم المستخدم</label>
+        <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" [(ngModel)]="email" >
+        <label  style="right: 0" for="materialRegisterFormEmail" > الايميل</label>
       </div>
 
 
       <div class="md-form">
-        <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+        <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="password" [(ngModel)]="password" >
         <label  style="right: 0" for="materialRegisterFormPassword" >كلمة السر</label>
         <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
           على الاقل ثمانية حروف او ارقام
@@ -44,22 +29,22 @@
 
 
 
-  <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="myRegister()">تسجيل</button>
+      <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="myRegister()">تسجيل</button>
 
 
-  <p>او سجل عن طريق:</p>
+      <p>او سجل عن طريق:</p>
+ 
+      <a type="button" class="btn-floating btn-fb btn-sm">
+        <i class="fa fa-facebook"></i>
+      </a>
+     <a type="button" class="btn-floating btn-tw btn-sm">
+        <i class="fa fa-twitter"></i>
+      </a>
+     <a type="button" class="btn-floating btn-gplus btn-sm ">
+         <i class="fa fa-google-plus"></i>
+      </a>
 
-  <a type="button" class="btn-floating btn-fb btn-sm">
-    <i class="fa fa-facebook"></i>
-  </a>
-  <a type="button" class="btn-floating btn-tw btn-sm">
-    <i class="fa fa-twitter"></i>
-  </a>
-  <a type="button" class="btn-floating btn-gplus btn-sm ">
-    <i class="fa fa-google-plus"></i>
-  </a>
-
-  <hr>
+       <hr>
 
   </form>
   <!-- Form -->

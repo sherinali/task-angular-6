@@ -5,7 +5,10 @@ export interface Roles {
   }
   
   export class User {
+    uid: string;
     email:    string;
+    username: string;
+    password : string;
     roles:    Roles;
   
     constructor(authData) {
